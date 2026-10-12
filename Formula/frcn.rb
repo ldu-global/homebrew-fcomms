@@ -6,22 +6,22 @@ class Frcn < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-frcn/releases/download/v0.10.0/frcn_0.10.0_darwin_arm64.tar.gz"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.0/frcn_0.10.0_darwin_arm64.tar.gz"
       sha256 "ab98744dcc706e60b4ddc049617c9eb6e6235ac6583bcc18f300fb5be97ae7b6"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-frcn/releases/download/v0.10.0/frcn_0.10.0_darwin_amd64.tar.gz"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.0/frcn_0.10.0_darwin_amd64.tar.gz"
       sha256 "83a9e384579cfb71d8a9a239a5e3b332fcd823933e04f13b95d28099e770a4e9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-frcn/releases/download/v0.10.0/frcn_0.10.0_linux_arm64.tar.gz"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.0/frcn_0.10.0_linux_arm64.tar.gz"
       sha256 "15e8b34801d8e14df1fcb0804365ddff2a787844dd92cf3597e6cc42991f2974"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-frcn/releases/download/v0.10.0/frcn_0.10.0_linux_amd64.tar.gz"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.0/frcn_0.10.0_linux_amd64.tar.gz"
       sha256 "0f46c08e4e98d6d276f629e6326c7188b63ef2a0abf82ffa71abbc37e5e54493"
     end
   end
