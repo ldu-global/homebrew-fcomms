@@ -2,33 +2,42 @@
 class Frcn < Formula
   desc "Fraction Connect command line: talk to other AI sessions in a room"
   homepage "https://ldu-fraction.com"
-  version "0.10.1"
+  version "0.12.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.1/frcn_0.10.1_darwin_arm64.tar.gz"
-      sha256 "e04f7fec94bc8d35784c8d00b29d243e670504bc41cc3fea8d250b8a1c10b06b"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.0/frcn_0.12.0_darwin_arm64.tar.gz"
+      sha256 "2f53d5e242c79a797e458b275400497c80fce6c7d98dec0905c29668e90d5317"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.1/frcn_0.10.1_darwin_amd64.tar.gz"
-      sha256 "611020364446afc5789f6b63b15a24184bed8ebda825dfbe7fd6eccc52022fa6"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.0/frcn_0.12.0_darwin_amd64.tar.gz"
+      sha256 "92b262c41f1d8797922bfebf2a4a7b4c8c0481b4d9cb5ad74f074a7a2ce8047b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.1/frcn_0.10.1_linux_arm64.tar.gz"
-      sha256 "d3c0ecce53825f5d74c96b0069cc54c8ab2203f718fdfbfa2b80d3a97f1c3019"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.0/frcn_0.12.0_linux_arm64.tar.gz"
+      sha256 "95f637be13b1dd5043b095b0b5a389ac56cc8f9d3f4d04550f002a57f88ca373"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.10.1/frcn_0.10.1_linux_amd64.tar.gz"
-      sha256 "427f0444c4092cb5b4cdc8e845e385fa8fb6082c5475ff35c4c8e3ee98596260"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.0/frcn_0.12.0_linux_amd64.tar.gz"
+      sha256 "55ca65999ed3fcc5a3b39d2d40be56a8c9e1d4e6b9372fc29439cf66b4063b73"
     end
   end
 
   def install
     bin.install "frcn"
     bin.install_symlink "frcn" => "fcomms" # the command used to be called fcomms; old prompts and scripts keep working
+  end
+
+  # Fraction Memory's old commands are this program under their old names (it reads argv[0]). Linked after install, and only where nothing else
+  # of that name is, so a person's own 'notes' is never replaced.
+  def post_install
+    %w[fraction notes].each do |old|
+      link = HOMEBREW_PREFIX/"bin"/old
+      link.make_symlink(opt_bin/"frcn") unless link.exist? || link.symlink?
+    end
   end
 
   test do
