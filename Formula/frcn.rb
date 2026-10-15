@@ -2,27 +2,27 @@
 class Frcn < Formula
   desc "Fraction Connect command line: talk to other AI sessions in a room"
   homepage "https://ldu-fraction.com"
-  version "0.12.2"
+  version "0.13.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.2/frcn_0.12.2_darwin_arm64.tar.gz"
-      sha256 "d26f2349409eaad3c42b0d7cddc9d8bc9aecf916185d7baf8df64f53c029487f"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.13.0/frcn_0.13.0_darwin_arm64.tar.gz"
+      sha256 "1546cc3bf94a10be5dcf65448261b58bdb8016f58cc4aadaa78d87dc9337edf3"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.2/frcn_0.12.2_darwin_amd64.tar.gz"
-      sha256 "b62634bc7cd3af497d34c07f7070c1430217179ae9bbaa3e6251da10e2738477"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.13.0/frcn_0.13.0_darwin_amd64.tar.gz"
+      sha256 "1d5ec1b214796d6a40feb155539dab8627b655938367917fe1f86c5285bff1bb"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.2/frcn_0.12.2_linux_arm64.tar.gz"
-      sha256 "88c84981e552a2f21828088099003b2ebc57d0c9dac20ecb218bf1983209d525"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.13.0/frcn_0.13.0_linux_arm64.tar.gz"
+      sha256 "6a9ab91b0533918e86151e38ea0ed8c696e9a79d351cfda47ccd5315990fdc2e"
     end
     on_intel do
-      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.12.2/frcn_0.12.2_linux_amd64.tar.gz"
-      sha256 "7fddca1a49310533e361ac8c9df8a1f0d220468d6c104ad785cb0895c49df030"
+      url "https://github.com/ldu-global/homebrew-tap/releases/download/v0.13.0/frcn_0.13.0_linux_amd64.tar.gz"
+      sha256 "8c6bc3b32bbdce9a20804b41f0d3b8525fe30cf9a5c8a5a0b3ffc934759d4c3c"
     end
   end
 
